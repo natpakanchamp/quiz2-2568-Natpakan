@@ -15,5 +15,7 @@ export default function ItemCard() {
 
   return {
     /* Type additional text here. */
+    let val_number: number = Number("500.0");
+    console.log(val_number + 100);
   };
 }
