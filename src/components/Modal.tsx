@@ -7,6 +7,7 @@ import {
   Button,
   Stack,
   Group,
+  InputLabel,
 } from "@mantine/core";
 import HeaderComponent from "./Header";
 
@@ -61,20 +62,23 @@ export default function AddExpenseModal({}: AddExpenseModalProps) {
   }
 
   const computeTotalPayment = () => {
-    let total:number = Number(amount);
-    console.log(total += amount);
+    let total: number = Number(amount);
+    console.log(total + Number(amount));
   }
 
   // หากต้องการแปลง type string เป็น type number สามารถดูตัวอย่างนี้ได้
   let val_number: number = Number("500.0");
   console.log(val_number + 100); // 600.0
 
-  return {
-    /* Type additional text here. */
-    <TextInput
-      label="Input label"
-      description="Input description"
-      placeholder="Input placeholder"
-    />
-  };
+  return (
+    <Modal opened={false} onClose={() => {}}>
+      <Stack>
+        <TextInput 
+          label="Input label"
+          description="Input description"
+          placeholder="Input placeholder"
+        />
+      </Stack>
+    </Modal>
+  );
 }
